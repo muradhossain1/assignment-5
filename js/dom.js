@@ -1,48 +1,68 @@
-function addClassListById (id){
-    document.getElementById(id).classList.add('bg-lime-300')
+// history button section
+function getHistoryButtonById (id){
+    const removeClass =document.getElementById(id).classList.add('bg-lime-300');
+    const addClass=document.getElementById(id).classList.remove('border-2');
+    return removeClass, addClass;
 }
-function removeClassListById (id){
-    document.getElementById(id).classList.remove('bg-lime-300')
+// donation button section
+function getDonationButtonById (id){
+    const removeClass =document.getElementById(id).classList.remove('bg-lime-300');
+    const addClass =document.getElementById(id).classList.add('border-2');
+    return removeClass, addClass;
+}
+
+// hidden add & remove function
+function getAddHiddenById(id){
+    const add =document.getElementById(id).classList.add('hidden');
+    return add;
+}
+function getRemoveHiddenById(id){
+    const remove = document.getElementById(id).classList.remove('hidden');
+    return remove;
+}
+
+//input element function
+function getInputElemantById (id){
+    const inputValue = parseFloat(document.getElementById(id).value);
+    return inputValue;
+}
+// text element function
+function getTextElementById(id){
+    const textValue = parseFloat(document.getElementById(id).innerText);
+    return textValue ;
 }
 // blog button clicked
 // document.getElementById()
 
 // history button clicked
 document.getElementById('btn-history').addEventListener('click', function(){
-    addClassListById('btn-history')
-    removeClassListById('btn-donation')
-    document.getElementById('btn-history').classList.remove('border-2')
-    document.getElementById('btn-donation').classList.add('border-2')
+    getHistoryButtonById('btn-history');
+    getDonationButtonById('btn-donation')
 
-    document.getElementById('history-list').classList.remove('hidden')
-    document.getElementById('food-donate-saction').classList.add('hidden')
+    getRemoveHiddenById('history-list')
+    getAddHiddenById('food-donate-saction')
 })
 // donation button clicked
 document.getElementById('btn-donation').addEventListener('click', function(){
-    removeClassListById('btn-history')
-    addClassListById('btn-donation')
+    getDonationButtonById('btn-history')
+    getHistoryButtonById('btn-donation')
 
-    document.getElementById('btn-history').classList.add('border-2')
-    document.getElementById('btn-donation').classList.remove('border-2')
-    
-    document.getElementById('history-list').classList.add('hidden')
-    document.getElementById('food-donate-saction').classList.remove('hidden')
+    getAddHiddenById('history-list')
+    getRemoveHiddenById('food-donate-saction')
 })
 
 // donate-now-button-1
 document.getElementById('donate-noakhali-btn').addEventListener('click', function(){
-   const inputAmount = parseFloat(document.getElementById('input-amount-noakhali').value);
-   
-   const noakhaliTotalAmount = parseFloat(document.getElementById('noakhali-amount-donate').innerText);
+   const inputAmount = getInputElemantById('input-amount-noakhali');
+   const noakhaliTotalAmount = getTextElementById('noakhali-amount-donate');
    const totalAmount = noakhaliTotalAmount + inputAmount;
    document.getElementById('noakhali-amount-donate').innerText = totalAmount;
 
-   const balance = document.getElementById('balance').innerText;
+   const balance = getTextElementById('balance');
    const totalBalance = balance - inputAmount;
    document.getElementById('balance').innerText = totalBalance;
   
-   
-   
+   // history massage
    const div = document.createElement('div');
    div.className = " border-2 rounded-lg p-6 space-y-2 mb-4";
    div.innerHTML = `
@@ -51,16 +71,12 @@ document.getElementById('donate-noakhali-btn').addEventListener('click', functio
            <p class ="text-xs text-gray-500">Date: ${new Date()}</p>
    `
    document.getElementById('history-list').appendChild(div);
-
-
-   
 })
 
 // donate-now-button-2
 document.getElementById('donate-feni-btn').addEventListener('click', function(){
-   const inputAmount = parseFloat(document.getElementById('input-amount-feni').value);
-   
-   const faniTotalAmount = parseFloat(document.getElementById('feni-amount-donate').innerText);
+   const inputAmount = getInputElemantById('input-amount-feni');
+   const faniTotalAmount = getTextElementById('feni-amount-donate');
    const totalAmount = faniTotalAmount + inputAmount;
    document.getElementById('feni-amount-donate').innerText = totalAmount;
 
@@ -68,9 +84,7 @@ document.getElementById('donate-feni-btn').addEventListener('click', function(){
    const totalBalance = balance - inputAmount;
    document.getElementById('balance').innerText = totalBalance;
 
-
-
-
+  // history massage
    const div = document.createElement('div');
    div.className = " border-2 rounded-lg p-6 space-y-2 mb-4";
    div.innerHTML = `
@@ -81,11 +95,11 @@ document.getElementById('donate-feni-btn').addEventListener('click', function(){
    document.getElementById('history-list').appendChild(div);
 
 })
+
 // donate-now-button-3
 document.getElementById('donate-quota-btn').addEventListener('click', function(){
-   const inputAmount = parseFloat(document.getElementById('input-amount-quota').value);
-   
-   const quotaTotalamount = parseFloat(document.getElementById('qouta-amount-donate').innerText);
+   const inputAmount = getInputElemantById('input-amount-quota');
+   const quotaTotalamount = getTextElementById('qouta-amount-donate');
    const totalAmount = quotaTotalamount + inputAmount;
    document.getElementById('qouta-amount-donate').innerText = totalAmount;
 
@@ -93,10 +107,7 @@ document.getElementById('donate-quota-btn').addEventListener('click', function()
    const totalBalance = balance - inputAmount;
    document.getElementById('balance').innerText = totalBalance;
 
-
-
-
-
+   // history massage
    const div = document.createElement('div');
    div.className = " border-2 rounded-lg p-6 space-y-2 mb-4";
    div.innerHTML = `
