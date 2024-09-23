@@ -4,6 +4,8 @@ function addClassListById (id){
 function removeClassListById (id){
     document.getElementById(id).classList.remove('bg-lime-300')
 }
+// blog button clicked
+// document.getElementById()
 
 // history button clicked
 document.getElementById('btn-history').addEventListener('click', function(){
@@ -49,6 +51,9 @@ document.getElementById('donate-noakhali-btn').addEventListener('click', functio
            <p class ="text-xs text-gray-500">Date: ${new Date()}</p>
    `
    document.getElementById('history-list').appendChild(div);
+
+
+   
 })
 
 // donate-now-button-2
@@ -104,8 +109,10 @@ document.getElementById('donate-quota-btn').addEventListener('click', function()
 })
 
 
-
-
+const btnContinue = document.getElementById('btn-continue');
+btnContinue.addEventListener('click', function () {
+    window.location.reload(inputAmount);
+});
 
 
 
