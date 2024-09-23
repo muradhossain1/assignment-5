@@ -39,21 +39,16 @@ document.getElementById('donate-noakhali-btn').addEventListener('click', functio
    const totalBalance = balance - inputAmount;
    document.getElementById('balance').innerText = totalBalance;
   
-
-
-
-   const historyItem = document.createElement('div');
-   historyItem.className = " border-2";
-   historyItem.innerHTML = `
-           <p class ="text-xs text-gray-500">${new Date().toLocaleDateString()}</p>
-           <p class ="text-xs text-gray-500">Income: $${inputAmount.toFixed(2)}</p>
-           <p class ="text-xs text-gray-500">Expenss: $${totalAmount.toFixed(2)}</p>
-           <p class ="text-xs text-gray-500">Balance: $${balance.toFixed(2)}</p>
+   
+   
+   const div = document.createElement('div');
+   div.className = " border-2 rounded-lg p-6 space-y-2 mb-4";
+   div.innerHTML = `
+           
+           <p class ="text-xl font-bold">${inputAmount} Taka is Donate for Flood at Noakhali, Bangladesh</p>
+           <p class ="text-xs text-gray-500">Date: ${new Date()}</p>
    `
-   const historyContainer = document.getElementById('history-list');
-   historyContainer.insertBefore(historyItem, historyContainer.firstChild);
-
-
+   document.getElementById('history-list').appendChild(div);
 })
 
 // donate-now-button-2
@@ -68,8 +63,20 @@ document.getElementById('donate-feni-btn').addEventListener('click', function(){
    const totalBalance = balance - inputAmount;
    document.getElementById('balance').innerText = totalBalance;
 
+
+
+
+   const div = document.createElement('div');
+   div.className = " border-2 rounded-lg p-6 space-y-2 mb-4";
+   div.innerHTML = `
+           
+           <p class ="text-xl font-bold">${inputAmount} Taka is Donate for Flood Relief in Feni,Bangladesh, Bangladesh</p>
+           <p class ="text-xs text-gray-500">Date: ${new Date()}</p>
+   `
+   document.getElementById('history-list').appendChild(div);
+
 })
-// donate-now-button-1
+// donate-now-button-3
 document.getElementById('donate-quota-btn').addEventListener('click', function(){
    const inputAmount = parseFloat(document.getElementById('input-amount-quota').value);
    
@@ -81,7 +88,27 @@ document.getElementById('donate-quota-btn').addEventListener('click', function()
    const totalBalance = balance - inputAmount;
    document.getElementById('balance').innerText = totalBalance;
 
+
+
+
+
+   const div = document.createElement('div');
+   div.className = " border-2 rounded-lg p-6 space-y-2 mb-4";
+   div.innerHTML = `
+           
+           <p class ="text-xl font-bold">${inputAmount} Taka is Donate for Aid for Injured in the Quota Movement, Bangladesh</p>
+           <p class ="text-xs text-gray-500">Date: ${new Date()}</p>
+   `
+   document.getElementById('history-list').appendChild(div);
+
 })
 
 
 
+
+
+
+
+{/* <p class ="text-xs text-gray-500">Expenss: $${totalAmount.toFixed(2)}</p>
+<p class ="text-xs text-gray-500">Balance: $${balance.toFixed(2)}</p>
+` */}
