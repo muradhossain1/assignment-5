@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page</title>
+    <!-- tailwind & daisyui link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">  
+    <style>
+        .font-lexend {
+            font-family: "Lexend", sans-serif;
+        }
+    </style>
+</head>
+<body class="font-lexend">
+    <main>
+        <!-- navber section -->
+        <section class="bg-red-50 ">
+            <div class="navbar lg:w-5/6 p-4 justify-between m-auto">
+                <div>
+                    <button class=" w-20 h-10 rounded-md font-bold text-sm bg-lime-300">Home</button>
+                </div>
+                <div class="gap-2 font-bold">
+                    <img src="./assets/logo.png" alt="">
+                    <h2>Donate Bangladesh</h2>
+                </div>
+                <div class="gap-2 font-semibold">
+                    <img src="./assets/coin.png" alt="">
+                    <h4 class=""><span id="balance" class="">5500</span> BDT</h4>
+                </div>
+              </div>
+        </section>
+        <!-- qus section  -->
+        <section class="mt-12 w-4/5 m-auto">
+            <h1 class="text-3xl font-bold mb-6">Important FAQ</h1>
+            <div class="collapse collapse-arrow border">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-xl font-medium">What is the Docunet Object Model (DOM)?</div>
+                <div class="collapse-content">
+                  <p>hello</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow border">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">How do you select an elemant from the DOM?</div>
+                <div class="collapse-content">
+                  <p>hello</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow border">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+                <div class="collapse-content">
+                  <p>hello</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow border">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">How do you mainpulate an elemant's attributes and styles using the DOM?</div>
+                <div class="collapse-content">
+                  <p>hello</p>
+                </div>
+              </div>
+        </section>
+    </main>
+</body>
+</html>
