@@ -31,8 +31,11 @@ function getTextElementById(id){
     const textValue = parseFloat(document.getElementById(id).innerText);
     return textValue ;
 }
+
 // blog button clicked
-// document.getElementById()
+document.getElementById('blog-btn').addEventListener('click', function(){
+    window.location.href = './blog.html';
+})
 
 // history button clicked
 document.getElementById('btn-history').addEventListener('click', function(){

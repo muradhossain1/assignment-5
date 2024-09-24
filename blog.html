@@ -24,7 +24,7 @@
         <section class="bg-red-50 ">
             <div class="navbar lg:w-5/6 p-4 justify-between m-auto">
                 <div>
-                    <button class=" w-20 h-10 rounded-md font-bold text-sm bg-lime-300">Home</button>
+                    <button id="home-btn" class=" w-20 h-10 rounded-md font-bold text-sm bg-lime-300">Home</button>
                 </div>
                 <div class="gap-2 font-bold">
                     <img src="./assets/logo.png" alt="">
@@ -69,6 +69,10 @@
               </div>
         </section>
     </main>
-    <!-- <script src="./js/dom.js"></script> -->
+    <script>
+      document.getElementById('home-btn').addEventListener('click', function(){
+        window.location.href = './index.html';
+      })
+    </script>
 </body>
 </html>
