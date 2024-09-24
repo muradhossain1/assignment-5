@@ -33,7 +33,6 @@ document.getElementById('donate-noakhali-btn').addEventListener('click', functio
     document.getElementById('myModal').close();
     return;
    }
-   
    const totalAmount = noakhaliTotalAmount + inputAmount;
    document.getElementById('noakhali-amount-donate').innerText = totalAmount;
 
@@ -47,6 +46,7 @@ document.getElementById('donate-noakhali-btn').addEventListener('click', functio
            <p class ="text-xs bg-gray-100 p-3 opacity-80 rounded-lg">Date: ${new Date()}</p>
    `
    document.getElementById('history-list').appendChild(div);
+
    
 })
 
@@ -110,8 +110,3 @@ document.getElementById('donate-quota-btn').addEventListener('click', function()
    document.getElementById('history-list').appendChild(div);
 
 })
-
-// Modal clicked
-document.getElementById('btn-continue').addEventListener('click', function () {
-    window.location.reload(inputAmount);
-});

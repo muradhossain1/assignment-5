@@ -1,13 +1,13 @@
 // history button section
 function getHistoryButtonById (id){
     const removeClass =document.getElementById(id).classList.add('bg-lime-300');
-    const addClass=document.getElementById(id).classList.remove('border-2');
+    const addClass=document.getElementById(id).classList.remove('border-2', 'bg-white');
     return removeClass, addClass;
 }
 // donation button section
 function getDonationButtonById (id){
     const removeClass =document.getElementById(id).classList.remove('bg-lime-300');
-    const addClass =document.getElementById(id).classList.add('border-2');
+    const addClass =document.getElementById(id).classList.add('border-2', 'bg-white');
     return removeClass, addClass;
 }
 

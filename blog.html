@@ -19,51 +19,58 @@
     </style>
 </head>
 <body class="font-lexend">
-    <main>
+    <header class=" relative">
+    <div class="fixed top-0 left-0 right-0 bg-opacity-50 backdrop-blur z-50">
         <!-- navber section -->
-        <section class="bg-red-50 ">
-            <div class="navbar lg:w-5/6 p-4 justify-between m-auto gap-4">
-                <div>
-                    <button id="home-btn" class=" w-20 h-9 lg:h-10 rounded-md font-bold text-sm bg-lime-300">Home</button>
-                </div>
-                <div class="gap-2 font-semibold lg:font-bold">
-                    <img class="w-8 lg:w-12" src="./assets/logo.png" alt="">
-                    <h2 class="text-lg hidden md:block lg:block">Donate Bangladesh</h2>
-                </div>
-                <div class="gap-2 font-semibold">
-                    <img class="w-6" src="./assets/coin.png" alt="">
-                    <h4 class="text-xs lg:text-lg"><span id="balance" class="">5500</span> BDT</h4>
-                </div>
-              </div>
-        </section>
+      <section class="bg-red-50 ">
+        <div class="navbar lg:w-5/6 p-4  justify-between m-auto gap-4">
+            <div class="">
+                <button id="home-btn" class=" w-20 h-9 lg:h-10 rounded-md font-bold text-sm bg-lime-300">Home</button>
+            </div>
+            <div class="gap-2 font-semibold lg:font-bold ">
+                <img class="w-8 lg:w-12" src="./assets/logo.png" alt="">
+                <h2 class="text-lg hidden md:block lg:block">Donate Bangladesh</h2>
+            </div>
+            <div class="gap-2 font-semibold">
+                <img class="w-6" src="./assets/coin.png" alt="">
+                <h4 class="text-sm lg:text-lg"><span id="balance" class="">5500</span> BDT</h4>
+            </div>
+          </div>
+      </section>
+    </div>
+    </header>
+    <main>
         <!-- qus section  -->
-        <section class="mt-12 p-6 lg:w-4/5 m-auto">
-            <h1 class="text-3xl font-bold mb-6">Important FAQ</h1>
+        <section class="mt-28 p-6 lg:w-4/5 m-auto">
+            <div class="flex items-start gap-4 ">
+              <h1 class="text-3xl font-bold mb-6">Important FAQ</h1>
+              <img class="w-10 " src="./assets/question.gif" alt="">
+            </div>
             <div class="collapse collapse-arrow border">
                 <input type="radio" name="my-accordion-2" checked="checked" />
                 <div class="collapse-title text-xl font-medium">What is the Docunet Object Model (DOM)?</div>
-                <div class="collapse-content">
+                <div class="collapse-content opacity-80">
                   <p class="text-sm ">The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.</p>
                 </div>
               </div>
               <div class="collapse collapse-arrow border">
                 <input type="radio" name="my-accordion-2" />
                 <div class="collapse-title text-xl font-medium">How do you select an elemant from the DOM?</div>
-                <div class="collapse-content">
+                <div class="collapse-content opacity-80">
                   <p class="text-sm">The getElementById() method of the Document interface returns an Element object representing the element whose id property matches the specified string. Since element IDs are required to be unique if specified, they're a useful way to get access to a specific element quickly.</p>
                 </div>
               </div>
               <div class="collapse collapse-arrow border">
                 <input type="radio" name="my-accordion-2" />
                 <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
-                <div class="collapse-content">
+                <div class="collapse-content opacity-80">
                   <p class="text-sm">Event delegation refers to the process of using event propagation (bubbling) to handle events at a higher level in the DOM than the element on which the event originated. It allows us to attach a single event listener for elements that exist now or in the future.</p>
                 </div>
               </div>
               <div class="collapse collapse-arrow border">
                 <input type="radio" name="my-accordion-2" />
                 <div class="collapse-title text-xl font-medium">How do you mainpulate an elemant's attributes and styles using the DOM?</div>
-                <div class="collapse-content">
+                <div class="collapse-content opacity-80">
                   <p class="text-sm">Changing an element's style (CSS) attributes is one of the ways in which the DOM can be used. For example, in the code below, the onfocus event handler method is used to change the (input) element's style when the user clicks inside it. When this event occurs, the element's background color will change to purple.</p>
                 </div>
               </div>
