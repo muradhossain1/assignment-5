@@ -19,32 +19,34 @@
     </style>
 </head>
 <body class="font-lexend ">
-    <header class="">
-        <!-- navber section -->
-        <section class="bg-red-50">
-            <div class="navbar lg:w-5/6 p-4 bg-red-50  justify-between m-auto gap-4">
-                <div class="bg-red-50">
-                    <button id="blog-btn" class=" w-20 h-9 lg:h-10 rounded-md font-bold text-sm bg-lime-300">Blog</button>
-                </div>
-                <div class="gap-2 font-semibold lg:font-bold bg-red-50 ">
-                    <img class="w-6 lg:w-12" src="./assets/logo.png" alt="">
-                    <h2 class="text-xs lg:text-lg text-center">Donate Bangladesh</h2>
-                </div>
-                <div class="gap-2 font-semibold bg-red-50">
-                    <img class="w-6" src="./assets/coin.png" alt="">
-                    <h4 class="text-xs lg:text-lg"><span id="balance" class="">5500</span> BDT</h4>
-                </div>
+    <header class=" relative">
+      <div class="fixed top-0 left-0 right-0 bg-opacity-50 backdrop-blur z-50">
+          <!-- navber section -->
+        <section class="bg-red-50 ">
+          <div class="navbar lg:w-5/6 p-4  justify-between m-auto gap-4">
+              <div class="">
+                  <button id="blog-btn" class=" w-20 h-9 lg:h-10 rounded-md font-bold text-sm bg-lime-300">Blog</button>
               </div>
-        </section>
-        <!-- button section  -->
-        <section class="text-center mt-12 ">
-            <div class="space-x-4">
-                <button id="btn-donation" class="w-32 lg:w-40 h-10 rounded-md font-bold text-sm bg-lime-300">Donation</button>
-                <button id="btn-history" class="w-32 lg:w-40 h-10 rounded-md font-bold border-2 text-sm">History</button>
+              <div class="gap-2 font-semibold lg:font-bold ">
+                  <img class="w-6 lg:w-12" src="./assets/logo.png" alt="">
+                  <h2 class="text-xs lg:text-lg text-center">Donate Bangladesh</h2>
+              </div>
+              <div class="gap-2 font-semibold">
+                  <img class="w-6" src="./assets/coin.png" alt="">
+                  <h4 class="text-xs lg:text-lg"><span id="balance" class="">5500</span> BDT</h4>
+              </div>
             </div>
         </section>
+        <!-- button section  -->
+        <section class="text-center  ">
+          <div class="space-x-4 py-8">
+              <button id="btn-donation" class="w-32 lg:w-40 h-10 rounded-md font-bold text-sm bg-lime-300">Donation</button>
+              <button id="btn-history" class="w-32 lg:w-40 h-10 rounded-md font-bold border-2 text-sm">History</button>
+          </div>
+      </section>
+      </div>
     </header>
-    <main class="mt-12 px-4 lg:px-0 lg:w-4/5 m-auto ">
+    <main class=" mt-52 px-4 lg:px-0 lg:w-4/5 m-auto ">
         <div id="food-donate-saction">
           <!-- food donate section 1 -->
           <section>
@@ -57,7 +59,7 @@
                     <h4 class=""><span id="noakhali-amount-donate" class="">0</span> BDT</h4>
                   </div>
                   <h1 class="text-lg font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
-                  <p class="text-sm opacity-80">
+                  <p class="text-sm opacity-80 ">
                     The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
                   </p>
                   <input id="input-amount-noakhali" class=" border-2 p-3 rounded-lg" type="text" placeholder="Write Donation Amount">
@@ -130,6 +132,7 @@
           </section>
           </div>
     </main>
+    <script src="./js/function.js"></script>
     <script src="./js/dom.js"></script>
 </body>
 </html>
